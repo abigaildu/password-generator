@@ -8,11 +8,14 @@
     </head>
 <body>
     <div class = "main">
-        <h1>Generate a random password</h1>
+        <h1>Generate a<br><span id = "random-password">random password</span></br></h1>
         <h2>Never use an insecure password again</h2>
-        <input id = "password-length" type = "number" placeholder="Enter number of characters">
-        <button onclick = "renderPassword()">⚡ Generate</button>
-        <div class="passwords">
+        <div class = "row">
+            <input id = "password-length" type = "number" placeholder="Enter number of characters">
+            <button id = "generate-btn" onclick = "renderPassword()">⚡ Generate</button>
+        </div>
+            <p>Click on the password you want to copy.</p>
+            <div class="passwords">
             <div>
                 <button id="password-el-one">password 1</button>
                 <button id="password-el-two">password 2</button>
