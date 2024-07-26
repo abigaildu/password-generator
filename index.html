@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>Random Password Generator</title>
+<head>
+    <link rel = "stylesheet" href = "index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Play:wght@400;700&family=Share+Tech&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class = "main">
+        <h1>Generate a random password</h1>
+        <h2>Never use an insecure password again</h2>
+        <input id = "password-length" type = "number" placeholder="Enter number of characters">
+        <button onclick = "renderPassword()">⚡ Generate</button>
+        <div class="passwords">
+            <div>
+                <p id="password-el-one" onclick="copyToClipboard('password-el-one')">password</p>
+                <p id="password-el-two" onclick="copyToClipboard('password-el-two')">password</p>
+            </div>
+            <div>
+                <p id="password-el-three" onclick="copyToClipboard('password-el-three')">password</p>
+                <p id="password-el-four" onclick="copyToClipboard('password-el-four')">password</p>
+            </div>
+        </div>               
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
