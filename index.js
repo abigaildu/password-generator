@@ -27,19 +27,37 @@ function renderPassword() {
     passwordElFour.textContent += generatePassword();
 }
 
-function copyToClipboard(e) {
-    let password = e.target;
-    navigator.clipboard.writeText(password.textContent).then(res=>{
-            console.log("Input data copied to clipboard successfully");
-        })
+function copyToClipboard(elementId) {
+    if(!elementId) return;
     
-  /* Alert the copied text */
+    let elementText = elementId.textContent;
+    let inputElement = document.createElement('input');
+    inputElement.setAttribute('value', elementText);
+    document.body.appendChild(inputElement);
+
+    inputElement.select();
+
+    document.execCommand('copy');
+    inputElement.parentNode.removeChild(inputElement);
 }
 
-passElOne.addEventListener("click", copyToClipboard)
-passElTwo.addEventListener("click", copyToClipboard)
-passElThree.addEventListener("click", copyToClipboard)
-passElFour.addEventListener("click", copyToClipboard)
+document.querySelector("#password-el-one").onclick = function() {
+    copyToClipboard(document.querySelector("#password-el-one"));
+}
+document.querySelector("#password-el-two").onclick = function() {
+    copyToClipboard(document.querySelector("#password-el-two"));
+}
+document.querySelector("#password-el-three").onclick = function() {
+    copyToClipboard(document.querySelector("#password-el-three"));
+}
+document.querySelector("#password-el-four").onclick = function() {
+    copyToClipboard(document.querySelector("#password-el-four"));
+}
+
+// passElOne.addEventListener("click", copyToClipboard)
+// passElTwo.addEventListener("click", copyToClipboard)
+// passElThree.addEventListener("click", copyToClipboard)
+// passElFour.addEventListener("click", copyToClipboard)
 
 // function copyToClipboard(elementId) {
 //     let copyText = document.getElementById(elementId).innerHTML;

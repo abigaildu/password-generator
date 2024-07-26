@@ -15,14 +15,15 @@ body {
 .passwords {
     margin-top: 80px;
     margin-bottom: 0px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 80px auto px auto;
+    display: block;
+    text-align: center;
 }
 
-p {
+button {
     background: white;
     padding: 10px 20px;
     margin-bottom: 40px;
     border-radius: 5px;
+    border: none;
 }
