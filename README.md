@@ -1,0 +1,1 @@
+Simple password generator app that generates random passwords based on user's input number of characters. User can then copy their desired password to their clipboard by clicking on their preferred password. Built using HTML, CSS and JavaScript.
